@@ -1,21 +1,29 @@
 package pgdp.collections;
 
-public class List {
-    public int info;
-    public List next;
+public class List<T> {
+    private final T info;
+    private List<T> next;
 
-    public List(int x) {
+    public T getInfo() {
+        return info;
+    }
+
+    public List<T> getNext() {
+        return next;
+    }
+
+    public List(T x) {
         info = x;
         next = null;
     }
 
-    public List(int x, List l) {
+    public List(T x, List<T> l) {
         info = x;
         next = l;
     }
 
-    public void insert(int x) {
-        next = new List(x, next);
+    public void insert(T x) {
+        next = new List<T>(x, next);
     }
 
     public void delete() {
@@ -36,5 +44,10 @@ public class List {
         for (List t = next; t != null; t = t.next)
             result = result + ", " + t.info;
         return result + "]";
+    }
+
+    public static void main(String[] args) {
+        List A = new List<Integer>(27);
+        A = new List<Integer>(27);
     }
 }
