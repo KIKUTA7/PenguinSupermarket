@@ -18,15 +18,15 @@ public class LinkedStack<T> implements Stack{
     }
 
     @Override
-    public LinkedStack<T> push(Object x) {
+    public List<T> push(Object x) {
          l = new List<T>((T) x,l);
-         return this;
+         return l;
     }
 
     @Override
-    public LinkedStack<T> pop() {
+    public List<T> pop() {
         l=l.getNext();
         if(this.size()==0) return null;
-        return this;
+        return l;
     }
 }
