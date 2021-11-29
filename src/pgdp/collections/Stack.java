@@ -1,7 +1,6 @@
 package pgdp.collections;
 
-public interface Stack <T> extends DataStructure {
-     List<T> push(T x);
-     List<T> pop();
-
+public interface Stack<T> extends DataStructure {
+    void push(T x);
+    T pop();
 }
