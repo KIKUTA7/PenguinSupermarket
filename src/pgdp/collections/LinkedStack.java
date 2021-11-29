@@ -26,6 +26,7 @@ public class LinkedStack<T> implements Stack{
     @Override
     public LinkedStack<T> pop() {
         l=l.getNext();
+        if(this.size()==0) return null;
         return this;
     }
 }
