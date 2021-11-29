@@ -1,7 +1,7 @@
 package pgdp.collections;
 
 public interface Queue <T> extends DataStructure {
-    List enqueue(T x);
-    List dequeue();
+    LinkedQueue<T> enqueue(T x);
+    LinkedQueue<T> dequeue();
 
 }
