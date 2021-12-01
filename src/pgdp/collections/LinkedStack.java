@@ -34,6 +34,7 @@ public class LinkedStack<T> implements Stack<T>{
 
     @Override
     public T pop() {
+        if(list==null) return null;
         T ans = list.getInfo();
         list = list.getNext();
         return ans;

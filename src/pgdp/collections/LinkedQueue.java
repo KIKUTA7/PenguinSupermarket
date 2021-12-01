@@ -46,7 +46,7 @@ public class LinkedQueue<T> implements Queue<T>{
            }
            else
            {
-               last.setNext(new List<T> (x));
+               last.insert(x);
                last=last.getNext();
            }
 
@@ -54,6 +54,7 @@ public class LinkedQueue<T> implements Queue<T>{
 
     @Override
     public T dequeue() {
+        if(first==null) return null;
         T ans  = first.getInfo();
         first = first.getNext();
         return ans;

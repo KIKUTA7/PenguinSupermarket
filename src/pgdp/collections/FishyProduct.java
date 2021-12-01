@@ -5,17 +5,17 @@ public class FishyProduct {
     private final int price;
     public FishyProduct(String name, int price)
     {
-       if(name!=null){
+       if(name==null ){
+           ExceptionUtil.illegalArgument("Error:name is null");
+       }
+        if(price<0)  {ExceptionUtil.illegalArgument("Error:price < 0");}
 
-           this.name = name;
-       }
-       else{
-           throw new UnsupportedOperationException("name == null");
-       }
-       if(price>=0)  this.price = price;
-       else{
-           throw new UnsupportedOperationException("price < 0");
-       }
+           this.name=name;
+
+
+
+           this.price=price;
+
     }
     public String getName() {
         return name;

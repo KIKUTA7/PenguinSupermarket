@@ -12,10 +12,6 @@ public class List<T> {
         return next;
     }
 
-    public void setNext(List<T> next) {
-        this.next = next;
-    }
-
     public List(T x) {
         info = x;
         next = null;
