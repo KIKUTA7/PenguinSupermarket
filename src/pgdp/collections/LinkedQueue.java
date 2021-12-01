@@ -5,6 +5,7 @@ public class LinkedQueue<T> implements Queue<T> {
 
     @Override
     public int size() {
+        if(firs==null) return 0;
         return firs.length();
     }
 
