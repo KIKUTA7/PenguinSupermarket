@@ -2,11 +2,6 @@ package pgdp.collections;
 
 public class LinkedQueue<T> implements Queue<T>{
     private List<T> first, last;
-    public LinkedQueue()
-    {
-        first=null;
-        last=null;
-    }
     @Override
     public int size() {
         int siz=1;

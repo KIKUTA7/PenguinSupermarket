@@ -2,9 +2,6 @@ package pgdp.collections;
 
 public class LinkedStack<T> implements Stack<T>{
     private List<T> list;
-    public LinkedStack()
-    {list = null;}
-
     @Override
     public int size() {
         int siz = 0;
