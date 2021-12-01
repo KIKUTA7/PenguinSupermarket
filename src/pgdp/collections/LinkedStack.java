@@ -17,7 +17,7 @@ public class LinkedStack<T> implements Stack<T>{
 
     @Override
     public void push(T x) {
-        list.insert(x);
+        list = new List<T>(x,list);
     }
 
     @Override
