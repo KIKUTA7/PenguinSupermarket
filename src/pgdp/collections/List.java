@@ -33,7 +33,7 @@ public class List<T> {
 
     public int length() {
         int result = 1;
-        for (List t = next; t != null; t = t.next)
+        for (List<T> t = next; t != null; t = t.next)
             result++;
         return result;
     }
@@ -41,13 +41,13 @@ public class List<T> {
     @Override
     public String toString() {
         String result = "[" + info;
-        for (List t = next; t != null; t = t.next)
+        for (List<T> t = next; t != null; t = t.next)
             result = result + ", " + t.info;
         return result + "]";
     }
 
-    public static void main(String[] args) {
-        List A = new List<Integer>(27);
+    public void main(String[] args) {
+        List<Integer> A = new List<Integer>(27);
         A = new List<Integer>(27);
     }
 }
