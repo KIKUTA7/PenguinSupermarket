@@ -5,7 +5,8 @@ public class StackConnector<T> implements DataStructureConnector<T> {
 
     @Override
     public boolean hasNextElement() {
-        return sta==null;
+        if(sta.isEmpty()) return false;
+        return true;
     }
 
     @Override

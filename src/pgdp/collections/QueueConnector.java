@@ -5,7 +5,8 @@ public class QueueConnector<T> implements DataStructureConnector<T> {
 
     @Override
     public boolean hasNextElement() {
-        return que==null;
+        if(que.isEmpty()) return false;
+        return true;
     }
 
     @Override
