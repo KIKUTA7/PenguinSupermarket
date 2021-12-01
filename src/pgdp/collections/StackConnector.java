@@ -1,8 +1,11 @@
 package pgdp.collections;
 
 public class StackConnector<T> implements DataStructureConnector<T> {
-    private Stack<T> sta = new LinkedStack<>();
-
+    private Stack<T> sta;
+    public StackConnector(Stack<T> sta)
+    {
+        this.sta=sta;
+    }
     @Override
     public boolean hasNextElement() {
         if(sta.isEmpty()) return false;

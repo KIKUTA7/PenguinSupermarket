@@ -1,12 +1,14 @@
 package pgdp.collections;
 
 public class QueueConnector<T> implements DataStructureConnector<T> {
-    private Queue<T> que = new LinkedQueue<>();
-
+    private  Queue<T> que;
+    public QueueConnector(Queue<T> que)
+    {
+        this.que=que;
+    }
     @Override
     public boolean hasNextElement() {
-        if(que.isEmpty()) return false;
-        return true;
+        return !que.isEmpty();
     }
 
     @Override
