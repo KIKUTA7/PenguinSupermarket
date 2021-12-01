@@ -18,7 +18,7 @@ public class LinkedQueue<T> implements Queue<T> {
           List<T> tem = firs;
           while(tem.getNext()!=null)
               tem=tem.getNext();
-          firs.insert(x);
+          tem.insert(x);
     }
 
     @Override
