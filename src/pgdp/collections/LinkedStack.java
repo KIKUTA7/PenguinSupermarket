@@ -2,15 +2,6 @@ package pgdp.collections;
 
 public class LinkedStack<T> implements Stack<T>{
     private List<T> list;
-
-    public void setList(List<T> list) {
-        this.list = list;
-    }
-
-    public List<T> getList() {
-        return list;
-    }
-
     public LinkedStack()
     {list = null;}
 
@@ -29,7 +20,7 @@ public class LinkedStack<T> implements Stack<T>{
 
     @Override
     public void push(T x) {
-     list = new List<T> (x,list);
+        list.insert(x);
     }
 
     @Override

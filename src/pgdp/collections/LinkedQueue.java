@@ -7,22 +7,6 @@ public class LinkedQueue<T> implements Queue<T>{
         first=null;
         last=null;
     }
-    public List<T> getFirst() {
-        return first;
-    }
-
-    public List<T> getLast() {
-        return last;
-    }
-
-    public void setFirst(List<T> first) {
-        this.first = first;
-    }
-
-    public void setLast(List<T> last) {
-        this.last = last;
-    }
-
     @Override
     public int size() {
         int siz=1;
