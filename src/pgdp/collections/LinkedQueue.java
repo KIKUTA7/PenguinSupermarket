@@ -15,10 +15,14 @@ public class LinkedQueue<T> implements Queue<T> {
 
     @Override
     public void enqueue(T x) {
-          List<T> tem = firs;
-          while(tem.getNext()!=null)
-              tem=tem.getNext();
-          tem.insert(x);
+        List<T> tem = firs;
+        while(tem!=null && tem.getNext()!=null)
+            tem=tem.getNext();
+        if(tem!=null) tem.insert(x);
+        else
+        {
+            firs = new List<T>(x,null);
+        }
     }
 
     @Override

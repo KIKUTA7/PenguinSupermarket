@@ -45,9 +45,4 @@ public class List<T> {
             result = result + ", " + t.info;
         return result + "]";
     }
-
-    public void main(String[] args) {
-        List<Integer> A = new List<Integer>(27);
-        A = new List<Integer>(27);
-    }
 }
