@@ -6,15 +6,6 @@ public class StackConnector<T> implements DataStructureConnector<T>{
     {
         name = new LinkedStack<T>();
     }
-
-    public Stack<T> getName() {
-        return name;
-    }
-
-    public void setName(Stack<T> name) {
-        this.name = name;
-    }
-
     @Override
     public boolean hasNextElement() {
         if(name.isEmpty()) return false;

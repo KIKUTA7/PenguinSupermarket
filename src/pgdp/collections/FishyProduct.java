@@ -27,6 +27,11 @@ public class FishyProduct {
         return price;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "FishyProduct{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

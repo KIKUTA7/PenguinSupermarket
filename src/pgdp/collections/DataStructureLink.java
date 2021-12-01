@@ -6,29 +6,15 @@ public class DataStructureLink<T> {
     {
         this.data1 = data1;
         this.data2 = data2;
-
     }
 
-    public DataStructureConnector<T> getData1() {
-        return data1;
-    }
 
-    public void setData1(DataStructureConnector<T> data1) {
-        this.data1 = data1;
-    }
-
-    public DataStructureConnector<T> getData2() {
-        return data2;
-    }
-
-    public void setData2(DataStructureConnector<T> data2) {
-        this.data2 = data2;
-    }
-
-    public void moveNextFromAToB()
+    public boolean moveNextFromAToB()
     {
+        if(data1==null) return false;
         T rem = data1.removeNextElement();
         data2.addElement(rem);
+        return true;
     }
     public void moveAllFromAToB(){
         while(data1.hasNextElement())
