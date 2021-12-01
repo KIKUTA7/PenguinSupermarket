@@ -15,7 +15,6 @@ public class FishyProduct {
 
 
            this.price=price;
-
     }
     public String getName() {
         return name;
