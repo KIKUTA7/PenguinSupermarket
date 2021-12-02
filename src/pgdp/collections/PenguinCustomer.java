@@ -11,7 +11,7 @@ public class PenguinCustomer {
         {
             ExceptionUtil.illegalArgument("name==null");
         }
-        if(mon < 0 )
+        if(mon < 0)
         {
             ExceptionUtil.unsupportedOperation("you can't buy anything.");
         }
