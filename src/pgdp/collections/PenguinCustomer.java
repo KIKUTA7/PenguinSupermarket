@@ -6,6 +6,7 @@ public class PenguinCustomer {
     private Stack<FishyProduct> cart;
     public PenguinCustomer(String name, int mon)
     {
+        cart = new LinkedStack<>();
         if(name==null)
         {
             ExceptionUtil.illegalArgument("name==null");
@@ -65,7 +66,7 @@ public class PenguinCustomer {
         {
             ExceptionUtil.unsupportedOperation("you haven't enough money");
         }
-        if(mon > x)mon-=x;
+        if(mon > x) mon-=x;
 
 
     }
