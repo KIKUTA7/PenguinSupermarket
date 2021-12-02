@@ -12,9 +12,7 @@ public class Checkout {
 
     }
 
-    public Queue<FishyProduct> getBandAfterCashier() {
-        return af;
-    }
+    public Queue<FishyProduct> getBandAfterCashier() { return af; }
 
     public Queue<FishyProduct> getBandBeforeCashier() {
         return be;
@@ -27,9 +25,29 @@ public class Checkout {
     {
         PenguinCustomer clien1 = pen.dequeue();
         clien1.placeAllProductsOnBand(be);
+        while (!be.isEmpty())
+        {
+            af.enqueue(be.dequeue());
+        }
+        int sum=0;
+        while(!af.isEmpty())
+        {
+            sum+= af.dequeue().getPrice();
+
+        }
+        clien1.pay(sum);
 
 
 
 
+    }
+
+    @Override
+    public String toString() {
+        return "Checkout{" +
+                "pen=" + pen +
+                ", be=" + be +
+                ", af=" + af +
+                '}';
     }
 }
