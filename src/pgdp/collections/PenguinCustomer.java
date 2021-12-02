@@ -3,9 +3,10 @@ package pgdp.collections;
 public class PenguinCustomer {
     private final String name;
     private  int mon;
-    private Stack<FishyProduct> cart= new LinkedStack<>();
+    private Stack<FishyProduct> cart;
     public PenguinCustomer(String name, int mon)
     {
+        cart  = new LinkedStack<>();
         if(name==null)
         {
             ExceptionUtil.illegalArgument("name==null");
