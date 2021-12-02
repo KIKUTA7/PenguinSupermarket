@@ -21,21 +21,22 @@ public class Checkout {
     public Queue<PenguinCustomer> getQueue() {
         return pen;
     }
+    public int queueLength(Queue que)
+    {
+       return que.size();
+    }
     public void serveNextCustomer()
     {
         PenguinCustomer clien1 = pen.dequeue();
         clien1.placeAllProductsOnBand(be);
         while (!be.isEmpty())
         {
-            FishyProduct fis = be.dequeue();
-            af.enqueue(fis);
+            af.enqueue(be.dequeue());
         }
         int sum=0;
-        while(!af.isEmpty())
+        for (int i=0;i< this.queueLength(af);i++)
         {
-            FishyProduct fis = af.dequeue();
-            sum+= fis.getPrice();
-
+            sum += af.dequeue().getPrice();
         }
         clien1.pay(sum);
 

@@ -27,5 +27,6 @@ public class Main {
         PenguinCustomer p1 = new PenguinCustomer("mariamI",27);
         PenguinCustomer p2 = new PenguinCustomer("Beqak",8);
 
+
     }
 }
