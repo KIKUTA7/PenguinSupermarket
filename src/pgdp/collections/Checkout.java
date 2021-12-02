@@ -21,10 +21,6 @@ public class Checkout {
     public Queue<PenguinCustomer> getQueue() {
         return pen;
     }
-    public int queueLength(Queue que)
-    {
-       return que.size();
-    }
     public void serveNextCustomer()
     {
         PenguinCustomer clien1 = pen.dequeue();
@@ -34,14 +30,11 @@ public class Checkout {
             af.enqueue(be.dequeue());
         }
         int sum=0;
-        for (int i=0;i< this.queueLength(af);i++)
+        while(af.isEmpty())
         {
-            if(af.isEmpty())
             sum += af.dequeue().getPrice();
         }
         clien1.pay(sum);
-
-
 
 
     }
