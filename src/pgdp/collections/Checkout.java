@@ -25,6 +25,10 @@ public class Checkout {
     }
     public void serveNextCustomer()
     {
+        PenguinCustomer clien1 = pen.dequeue();
+        clien1.placeAllProductsOnBand(be);
+
+
 
 
     }
