@@ -21,11 +21,11 @@ public class PenguinCustomer {
 
     }
 
-    public Stack<FishyProduct> getCart() {
+    public Stack<FishyProduct> getProducts() {
         return cart;
     }
 
-    public int getMon() {
+    public int getMoney() {
         return mon;
     }
 
