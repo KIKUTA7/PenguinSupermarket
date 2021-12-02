@@ -36,6 +36,7 @@ public class Checkout {
         int sum=0;
         for (int i=0;i< this.queueLength(af);i++)
         {
+            if(af.isEmpty())
             sum += af.dequeue().getPrice();
         }
         clien1.pay(sum);
