@@ -63,11 +63,6 @@ public class PenguinCustomer {
             ExceptionUtil.unsupportedOperation("you haven't enough money");
         }
 
-            // for no plagiat
-            mon++;
-            mon--;
-            mon++;
-            mon--;
             mon-=x;
 
 
