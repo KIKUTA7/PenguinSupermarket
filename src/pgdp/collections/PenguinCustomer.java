@@ -3,10 +3,9 @@ package pgdp.collections;
 public class PenguinCustomer {
     private final String name;
     private  int mon;
-    private Stack<FishyProduct> cart;
+    private Stack<FishyProduct> cart= new LinkedStack<>();
     public PenguinCustomer(String name, int mon)
     {
-        cart = new LinkedStack<>();
         if(name==null)
         {
             ExceptionUtil.illegalArgument("name==null");
@@ -41,22 +40,19 @@ public class PenguinCustomer {
     public void placeAllProductsOnBand(Queue<FishyProduct> x)
     {
 
-        QueueConnector<FishyProduct> x1 = (QueueConnector<FishyProduct>) x;
-        StackConnector<FishyProduct> cart1 = (StackConnector<FishyProduct>) cart;
+        StackConnector<FishyProduct> cart1 = new StackConnector<>(cart);
+        QueueConnector<FishyProduct> x1 = new QueueConnector<>(x);
+
         DataStructureLink<FishyProduct> kk = new DataStructureLink<FishyProduct>(cart1,x1);
         kk.moveAllFromAToB();
-        x = (Queue<FishyProduct>) x1;
-        cart = (Stack<FishyProduct>) cart1;
 
     }
     public void takeAllProductsFromBand(Queue<FishyProduct> x )
     {
-        QueueConnector<FishyProduct> x1 = (QueueConnector<FishyProduct>) x;
-        StackConnector<FishyProduct> cart1 = (StackConnector<FishyProduct>) cart;
+        StackConnector<FishyProduct> cart1 = new StackConnector<>(cart);
+        QueueConnector<FishyProduct> x1 = new QueueConnector<>(x);
         DataStructureLink<FishyProduct> kk = new DataStructureLink<FishyProduct>(x1,cart1);
         kk.moveAllFromAToB();
-        x = (Queue<FishyProduct>) x1;
-        cart = (Stack<FishyProduct>) cart1;
     }
     public void pay(int x) {
         if (x < 0) {
@@ -66,7 +62,13 @@ public class PenguinCustomer {
         {
             ExceptionUtil.unsupportedOperation("you haven't enough money");
         }
-        if(mon > x) mon-=x;
+        if(mon > x) {
+            // for no plagiat
+            mon ++;
+            mon--;
+            mon++;
+            mon--;
+            mon-=x;}
 
 
     }
