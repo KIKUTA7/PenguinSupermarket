@@ -26,6 +26,6 @@ public class Checkout {
     public void serveNextCustomer()
     {
 
-        pen.placeAllProductsOnBand(be);
+
     }
 }

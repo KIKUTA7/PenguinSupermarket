@@ -8,8 +8,8 @@ public class FishyProduct {
         if(name==null) {
             ExceptionUtil.illegalArgument("name==null");
         }
-        if(price<0) {
-            ExceptionUtil.illegalArgument("price < 0");
+        if(price<=0) {
+            ExceptionUtil.illegalArgument("price <= 0");
         }
         this.name = name;
         this.price = price;

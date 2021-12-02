@@ -3,7 +3,7 @@ package pgdp.collections;
 public class PenguinCustomer {
     private final String name;
     private  int mon;
-    private final Stack<FishyProduct> cart;
+    private Stack<FishyProduct> cart;
     public PenguinCustomer(String name, int mon)
     {
 
@@ -35,6 +35,7 @@ public class PenguinCustomer {
 
     public void addProductToBasket(FishyProduct x)
     {
+        if(x==null) return;
         cart.push(x);
     }
 
