@@ -4,6 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
         LinkedStack<Integer> x = new LinkedStack<>();
+        LinkedQueue<Integer> y = new LinkedQueue<>();
+        y.enqueue(27);
+        y.enqueue(8);
+        y.enqueue(9);
+        y.dequeue();
+        y.dequeue();
+        System.out.println(y.isEmpty());
         StackConnector<Integer> x1 = new StackConnector<>(x);
         x1.addElement(27);
         x1.removeNextElement();
