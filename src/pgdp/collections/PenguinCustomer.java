@@ -6,7 +6,7 @@ public class PenguinCustomer {
     private Stack<FishyProduct> cart;
     public PenguinCustomer(String name, int mon)
     {
-        cart  = new LinkedStack<>();
+
         if(name==null)
         {
             ExceptionUtil.illegalArgument("name==null");
@@ -15,7 +15,7 @@ public class PenguinCustomer {
         {
             ExceptionUtil.unsupportedOperation("you can't buy anything.");
         }
-
+        cart  = new LinkedStack<>();
         this.name = name;
         this.mon = mon;
 
@@ -43,8 +43,7 @@ public class PenguinCustomer {
 
         StackConnector<FishyProduct> cart1 = new StackConnector<>(cart);
         QueueConnector<FishyProduct> x1 = new QueueConnector<>(x);
-
-        DataStructureLink<FishyProduct> kk = new DataStructureLink<FishyProduct>(cart1,x1);
+        DataStructureLink<FishyProduct> kk = new DataStructureLink<>(cart1,x1);
         kk.moveAllFromAToB();
 
     }
@@ -52,7 +51,7 @@ public class PenguinCustomer {
     {
         StackConnector<FishyProduct> cart1 = new StackConnector<>(cart);
         QueueConnector<FishyProduct> x1 = new QueueConnector<>(x);
-        DataStructureLink<FishyProduct> kk = new DataStructureLink<FishyProduct>(x1,cart1);
+        DataStructureLink<FishyProduct> kk = new DataStructureLink<>(x1,cart1);
         kk.moveAllFromAToB();
     }
     public void pay(int x) {
