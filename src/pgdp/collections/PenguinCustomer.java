@@ -58,6 +58,10 @@ public class PenguinCustomer {
         if (x < 0) {
             ExceptionUtil.unsupportedOperation("amount is less than zero");
         }
+        if(mon < 0)
+        {
+            ExceptionUtil.illegalArgument("0 ze naklebia bj");
+        }
         if (mon < x)
         {
             ExceptionUtil.unsupportedOperation("you haven't enough money");
