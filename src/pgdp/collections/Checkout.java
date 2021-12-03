@@ -31,7 +31,7 @@ public class Checkout {
             af.enqueue(be.dequeue());
         }
         int sum=0;
-        while(!af.isEmpty())
+        while(af.isEmpty())
         {
             sum += af.dequeue().getPrice();
         }
