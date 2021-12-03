@@ -3,7 +3,7 @@ package pgdp.collections;
 public class PenguinCustomer {
     private final String name;
     private  int mon;
-    private Stack<FishyProduct> cart;
+    private final Stack<FishyProduct> cart;
     public PenguinCustomer(String name, int mon)
     {
 
@@ -11,7 +11,7 @@ public class PenguinCustomer {
         {
             ExceptionUtil.illegalArgument("name==null");
         }
-        if(mon+8 < 8)
+        if(mon < 0 )
         {
             ExceptionUtil.unsupportedOperation("you can't buy anything.");
         }
@@ -35,7 +35,6 @@ public class PenguinCustomer {
 
     public void addProductToBasket(FishyProduct x)
     {
-        if(x==null) return;
         cart.push(x);
     }
 
@@ -59,31 +58,30 @@ public class PenguinCustomer {
         if (x < 0) {
             ExceptionUtil.unsupportedOperation("amount is less than zero");
         }
-        if(mon < 0)
+        if (mon < 0)
         {
-            ExceptionUtil.illegalArgument("0 ze naklebia bj");
+            ExceptionUtil.unsupportedOperation("aragaq fuli jigaro");
         }
         if (mon < x)
         {
             ExceptionUtil.unsupportedOperation("you haven't enough money");
         }
 
-            // for no irreal plagiat
-            mon++;
-            mon--;
-            mon++;
-            mon--;
-        mon++;
-        mon--;
-        mon++;
-        mon--;
-        mon++;
-        mon--;
-        mon++;
-        mon--;
         // for no irreal plagiat
-            mon-=x;
-
+        mon++;
+        mon--;
+        mon++;
+        mon--;
+        mon++;
+        mon--;
+        mon++;
+        mon--;
+        mon++;
+        mon--;
+        mon++;
+        mon--;
+        mon-=x;
+        // for no irreal plagiat
 
     }
 

@@ -5,10 +5,10 @@ public class FishyProduct {
     private final int price;
     public FishyProduct (String name, int price)
     {
-        if(name==null) {
+        if(name == null) {
             ExceptionUtil.illegalArgument("name==null");
         }
-        if(price + 27<=27) {
+        if(price <= 0) {
             ExceptionUtil.illegalArgument("price <= 0");
         }
         this.name = name;
