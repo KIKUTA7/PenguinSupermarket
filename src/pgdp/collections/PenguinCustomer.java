@@ -3,7 +3,7 @@ package pgdp.collections;
 public class PenguinCustomer {
     private final String name;
     private  int mon;
-    private  Stack<FishyProduct> cart;
+    private  final Stack<FishyProduct> cart;
     public PenguinCustomer(String name, int mon)
     {
 
@@ -13,7 +13,7 @@ public class PenguinCustomer {
         }
         if(mon < 0 )
         {
-            ExceptionUtil.unsupportedOperation("you can't buy anything.");
+            ExceptionUtil.illegalArgument("you can't buy anything.");
         }
         cart  = new LinkedStack<>();
         this.name = name;
