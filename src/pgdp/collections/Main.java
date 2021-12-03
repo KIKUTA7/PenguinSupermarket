@@ -26,13 +26,18 @@ public class Main {
 //        System.out.println(x3.hasNextElement());
         PenguinCustomer p1 = new PenguinCustomer("mariamI",27);
         PenguinCustomer p2 = new PenguinCustomer("beqaK",8);
+        Queue<PenguinCustomer> pen = new LinkedQueue<>();
+        pen.enqueue(p1);
+        pen.enqueue(p2);
         FishyProduct p1cart = new FishyProduct("qafsha",3);
         FishyProduct p2cart = new FishyProduct("barabulka",7);
         Queue<FishyProduct> cart1 = new LinkedQueue<>();
         cart1.enqueue(p1cart);
         cart1.enqueue(p2cart);
         cart1.enqueue(p2cart);
-        Checkout 
+        Checkout checkout = new Checkout(pen);
+        checkout.serveNextCustomer();
+        System.out.println(p1.getMoney());
 
 
     }
