@@ -29,9 +29,9 @@ public class PenguinSupermarket {
          Checkout [] alche2 = alche.clone();
          Checkout [] alche1 = new Checkout[alche.length-1];
          int k=0;
-         for (int i=0;i< alche2.length;i++)
+         for (int i=0;i<alche2.length;i++)
          {
-             if(alche2[i]!=che) {alche1[k]=alche2[i];k++;}
+             if(i!=index) {alche1[k]=alche2[i];k++;}
              else {
                  Queue<PenguinCustomer> que = alche2[i].getQueue();
                  Stack<PenguinCustomer> sta = new LinkedStack<>();
