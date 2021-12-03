@@ -22,6 +22,10 @@ public class Checkout {
     public Queue<PenguinCustomer> getQueue() {
         return pen;
     }
+    public int queueLength()
+    {
+        return pen.size();
+    }
     public void serveNextCustomer()
     {
         PenguinCustomer clien1 = pen.dequeue();

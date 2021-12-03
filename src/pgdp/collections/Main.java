@@ -38,6 +38,8 @@ public class Main {
         p1.addProductToBasket(p1cart);
         p1.addProductToBasket(p2cart);
         p1.addProductToBasket(p2cart);
+        Checkout check  = new Checkout();
+
 
 
     }
