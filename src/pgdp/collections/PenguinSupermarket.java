@@ -1,5 +1,7 @@
 package pgdp.collections;
 
+import java.util.concurrent.ScheduledExecutorService;
+
 public class PenguinSupermarket {
     Checkout[] alche = new Checkout[0];
     public PenguinSupermarket(int reg){
@@ -30,6 +32,10 @@ public class PenguinSupermarket {
         if(alche.length==1) ExceptionUtil.unsupportedOperation("azri?");
         Checkout [] alche2 = alche.clone();
         Checkout [] alche1 = new Checkout[alche.length-1];
+        for (int i=0;i<alche.length-1;i++)
+        {
+            alche1[i] = new Checkout();
+        }
         int k=0;
         for (int i=0;i<alche2.length;i++)
         {
