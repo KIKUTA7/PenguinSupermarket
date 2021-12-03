@@ -38,9 +38,6 @@ public class Main {
         p1.addProductToBasket(p1cart);
         p1.addProductToBasket(p2cart);
         p1.addProductToBasket(p2cart);
-        Checkout checkout = new Checkout();
-        checkout.serveNextCustomer();
-        System.out.println(p1.getMoney());
 
 
     }
