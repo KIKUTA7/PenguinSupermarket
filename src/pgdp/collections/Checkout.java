@@ -1,9 +1,9 @@
 package pgdp.collections;
 
 public class Checkout {
-    private Queue<PenguinCustomer> pen;
-    private Queue<FishyProduct> be;
-    private Queue<FishyProduct> af;
+    private final Queue<PenguinCustomer> pen;
+    private final Queue<FishyProduct> be;
+    private final Queue<FishyProduct> af;
     public Checkout()
     {
         pen = new LinkedQueue<>();
@@ -11,7 +11,6 @@ public class Checkout {
         af = new LinkedQueue<>();
 
     }
-
 
 
     public Queue<FishyProduct> getBandAfterCashier() { return af; }
