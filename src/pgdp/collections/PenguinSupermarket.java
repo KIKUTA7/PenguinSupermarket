@@ -1,7 +1,7 @@
 package pgdp.collections;
 
 public class PenguinSupermarket {
-    Checkout[] alche = new Checkout[0];
+    Checkout[] alche ;
     public PenguinSupermarket(int reg){
         if(reg<=0) ExceptionUtil.illegalArgument("aba minus -1 daxli ranairad geqneba , tu geqneba maswavle da kibatono");
         alche = new Checkout[reg];
