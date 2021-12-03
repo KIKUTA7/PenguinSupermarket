@@ -32,6 +32,19 @@ public class PenguinSupermarket {
          for (int i=0;i< alche2.length;i++)
          {
              if(alche2[i]!=che) {alche1[k]=alche2[i];k++;}
+             else {
+                 Queue<PenguinCustomer> que = alche2[i].getQueue();
+                 Stack<PenguinCustomer> sta = new LinkedStack<>();
+                 while (!que.isEmpty())
+                 {
+                     sta.push(que.dequeue());
+
+                 }
+                 while(!sta.isEmpty())
+                 {
+                     sta.pop().goToCheckout(this);
+                 }
+             }
          }
          alche = alche1;
 
