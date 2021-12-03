@@ -30,18 +30,17 @@ public class PenguinSupermarket {
     {
         if(alche.length<index+1)    ExceptionUtil.unsupportedOperation("ra davketo ar maq eg salaro da");
         if(alche.length==1) ExceptionUtil.unsupportedOperation("azri?");
-        Checkout [] alche2 = alche.clone();
         Checkout [] alche1 = new Checkout[alche.length-1];
         for (int i=0;i<alche.length-1;i++)
         {
             alche1[i] = new Checkout();
         }
         int k=0;
-        for (int i=0;i<alche2.length;i++)
+        for (int i=0;i<alche.length;i++)
         {
-            if(i!=index) {alche1[k]=alche2[i];k++;}
+            if(i!=index) {alche1[k]=alche[i];k++;}
             else {
-                Queue<PenguinCustomer> que = alche2[i].getQueue();
+                Queue<PenguinCustomer> que = alche[i].getQueue();
                 Stack<PenguinCustomer> sta = new LinkedStack<>();
                 while (!que.isEmpty())
                 {
