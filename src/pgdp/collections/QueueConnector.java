@@ -1,7 +1,7 @@
 package pgdp.collections;
 
 public class QueueConnector<T> implements DataStructureConnector<T> {
-    private  Queue<T> que;
+    private  Queue<T> que = new LinkedQueue<>();
     public QueueConnector(Queue<T> que)
     {
         this.que=que;
