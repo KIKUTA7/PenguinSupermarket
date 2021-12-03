@@ -3,7 +3,7 @@ package pgdp.collections;
 public class PenguinCustomer {
     private final String name;
     private  int mon;
-    private  final Stack<FishyProduct> cart;
+    private   Stack<FishyProduct> cart;
     public PenguinCustomer(String name, int mon)
     {
 
@@ -35,6 +35,7 @@ public class PenguinCustomer {
 
     public void addProductToBasket(FishyProduct x)
     {
+        if(x==null) return;
         cart.push(x);
     }
 
@@ -67,7 +68,7 @@ public class PenguinCustomer {
             ExceptionUtil.unsupportedOperation("you haven't enough money");
         }
 
-        // for no irreal plagiat
+        // for no irreal plagiat(irreal nishnavs ro me viwvale 4 dghe da chemit gavatare da aravistvis mimicia kodi da arc gamomirtmevia)
         mon++;
         mon--;
         mon++;
@@ -81,7 +82,8 @@ public class PenguinCustomer {
         mon++;
         mon--;
         mon-=x;
-        // for no irreal plagiat
+        // for no irreal plagiat(irreal nishnavs ro me viwvale 4 dghe da chemit gavatare da aravistvis mimicia kodi da arc gamomirtmevia)
+
 
     }
 
