@@ -5,6 +5,9 @@ public class PenguinSupermarket {
     public PenguinSupermarket(int reg){
         if(reg<=0) ExceptionUtil.illegalArgument("aba minus -1 daxli ranairad geqneba , tu geqneba maswavle da kibatono");
         alche = new Checkout[reg];
+        for (int i = 0; i < alche.length; i++) {
+            alche[i] = new Checkout();
+        }
 
     }
 
