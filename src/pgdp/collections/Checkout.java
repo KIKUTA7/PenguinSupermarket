@@ -31,21 +31,16 @@ public class Checkout {
         PenguinCustomer clien1 = pen.dequeue();
         if(clien1==null) return;
         clien1.placeAllProductsOnBand(be);
+        int sum=0;
         while (!be.isEmpty())
         {
 
             FishyProduct fis = be.dequeue();
             af.enqueue(fis);
-        }
-        int sum=0;
-        while(!af.isEmpty())
-        {
-
-            FishyProduct fis = af.dequeue();
             sum+= fis.getPrice();
-
         }
         clien1.pay(sum);
+        clien1.takeAllProductsFromBand(af);
 
     }
 
