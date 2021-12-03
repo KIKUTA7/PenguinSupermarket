@@ -35,7 +35,10 @@ public class Main {
         cart1.enqueue(p1cart);
         cart1.enqueue(p2cart);
         cart1.enqueue(p2cart);
-        Checkout checkout = new Checkout(pen);
+        p1.addProductToBasket(p1cart);
+        p1.addProductToBasket(p2cart);
+        p1.addProductToBasket(p2cart);
+        Checkout checkout = new Checkout();
         checkout.serveNextCustomer();
         System.out.println(p1.getMoney());
 
