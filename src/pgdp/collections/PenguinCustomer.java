@@ -95,9 +95,9 @@ public class PenguinCustomer {
                 ", cart=" + cart +
                 '}';
     }
-    public void goToCheckout(PenguinSupermarket sup)
-    {
-        Checkout che = sup.getCheckoutWithSmallestQueue();
-        che.getQueue().enqueue(this);
-    }
+//    public void goToCheckout(PenguinSupermarket sup)
+//    {
+//        Checkout che = sup.getCheckoutWithSmallestQueue();
+//        che.getQueue().enqueue(this);
+//    }
 }
