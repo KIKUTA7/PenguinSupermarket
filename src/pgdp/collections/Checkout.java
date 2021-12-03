@@ -12,6 +12,10 @@ public class Checkout {
 
     }
 
+    public void setPen(Queue<PenguinCustomer> pen) {
+        this.pen = pen;
+    }
+
     public Queue<FishyProduct> getBandAfterCashier() { return af; }
 
     public Queue<FishyProduct> getBandBeforeCashier() {
