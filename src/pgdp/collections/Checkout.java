@@ -24,6 +24,7 @@ public class Checkout {
     public void serveNextCustomer()
     {
         PenguinCustomer clien1 = pen.dequeue();
+        if(clien1==null) return;
         clien1.placeAllProductsOnBand(be);
         while (!be.isEmpty())
         {
