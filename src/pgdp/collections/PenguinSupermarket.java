@@ -1,7 +1,5 @@
 package pgdp.collections;
 
-import java.util.concurrent.ScheduledExecutorService;
-
 public class PenguinSupermarket {
     Checkout[] alche = new Checkout[0];
     public PenguinSupermarket(int reg){
