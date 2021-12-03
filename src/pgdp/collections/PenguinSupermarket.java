@@ -28,7 +28,6 @@ public class PenguinSupermarket {
     {
         if(alche.length<index+1)    ExceptionUtil.unsupportedOperation("ra davketo ar maq eg salaro da");
         if(alche.length==1) ExceptionUtil.unsupportedOperation("azri?");
-        Checkout che = alche[index];
         Checkout [] alche2 = alche.clone();
         Checkout [] alche1 = new Checkout[alche.length-1];
         int k=0;
@@ -43,13 +42,14 @@ public class PenguinSupermarket {
                     sta.push(que.dequeue());
 
                 }
+                alche = alche1;
                 while(!sta.isEmpty())
                 {
                     sta.pop().goToCheckout(this);
                 }
             }
         }
-        alche = alche1;
+
 
 
     }
