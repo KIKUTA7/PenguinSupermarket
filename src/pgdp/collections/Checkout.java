@@ -28,15 +28,19 @@ public class Checkout {
         clien1.placeAllProductsOnBand(be);
         while (!be.isEmpty())
         {
-            af.enqueue(be.dequeue());
+
+            FishyProduct fis = be.dequeue();
+            af.enqueue(fis);
         }
         int sum=0;
-        while(af.isEmpty())
+        while(!af.isEmpty())
         {
-            sum += af.dequeue().getPrice();
+
+            FishyProduct fis = af.dequeue();
+            sum+= fis.getPrice();
+
         }
         clien1.pay(sum);
-
 
     }
 
