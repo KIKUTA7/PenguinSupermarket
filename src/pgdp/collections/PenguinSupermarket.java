@@ -39,20 +39,18 @@ public class PenguinSupermarket {
         for (int i=0;i<alche.length;i++)
         {
             if(i!=index) {alche1[k]=alche[i];k++;}
-            else {
-                Queue<PenguinCustomer> que = alche[i].getQueue();
-                Stack<PenguinCustomer> sta = new LinkedStack<>();
-                while (!que.isEmpty())
-                {
-                    sta.push(que.dequeue());
+        }
+        Queue<PenguinCustomer> que = alche[index].getQueue();
+        Stack<PenguinCustomer> sta = new LinkedStack<>();
+        while (!que.isEmpty())
+        {
+            sta.push(que.dequeue());
 
-                }
-                alche = alche1;
-                while(!sta.isEmpty())
-                {
-                    sta.pop().goToCheckout(this);
-                }
-            }
+        }
+        alche = alche1;
+        while(!sta.isEmpty())
+        {
+            sta.pop().goToCheckout(this);
         }
 
 
