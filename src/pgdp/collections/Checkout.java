@@ -4,9 +4,9 @@ public class Checkout {
     Queue<PenguinCustomer> pen;
     Queue<FishyProduct> be;
     Queue<FishyProduct> af;
-    public Checkout()
+    public Checkout(Queue<PenguinCustomer> pen)
     {
-        pen = new LinkedQueue<>();
+        this.pen = pen;
         be = new LinkedQueue<>();
         af = new LinkedQueue<>();
 

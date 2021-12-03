@@ -25,7 +25,14 @@ public class Main {
 //        x5.moveAllFromAToB();
 //        System.out.println(x3.hasNextElement());
         PenguinCustomer p1 = new PenguinCustomer("mariamI",27);
-        PenguinCustomer p2 = new PenguinCustomer("Beqak",8);
+        PenguinCustomer p2 = new PenguinCustomer("beqaK",8);
+        FishyProduct p1cart = new FishyProduct("qafsha",3);
+        FishyProduct p2cart = new FishyProduct("barabulka",7);
+        Queue<FishyProduct> cart1 = new LinkedQueue<>();
+        cart1.enqueue(p1cart);
+        cart1.enqueue(p2cart);
+        cart1.enqueue(p2cart);
+        Checkout 
 
 
     }
